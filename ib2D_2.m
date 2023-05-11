@@ -54,7 +54,7 @@ for clock=1:clockmax
         save(mfilename+"/"+mfilename+"_t"+clock+".mat","u","X","Point_rho","Xgg","t")
 
         %animation:
-        plot_frame
+%         plot_frame
     end
 
     if rem(clock,1000) == 0
