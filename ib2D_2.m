@@ -15,6 +15,7 @@ if ~exist('t','var')
     t = 0;
 
     bouN = 0.12*1.5;
+    Point_rho = -(H-Xgg(:,2))*bouN^2;
 
     %%
     disp("Re="+U_max*3*bump_h/mu)

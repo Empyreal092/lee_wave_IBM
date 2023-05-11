@@ -4,7 +4,7 @@ if ~exist('fg99')
 end
 
 sgtitle("$\mbox{Re}="+max(abs(u(:,:,2)),[],'all')*bump_h/mu+...
-    "; \mbox{Fr}="+max(abs(u(:,:,2)),[],'all')/(bouN*bump_h)+"t="+t+"$")
+    "; \mbox{Fr}="+max(abs(u(:,:,2)),[],'all')/(bouN*bump_h)+"; t="+t+"$")
 
 %%
 subaxis(2,2,1,'ML',0.05,'MR',0.05,'MT',0.12,'MB',0.1,'SV',0.15,'SH',0.06);
@@ -35,7 +35,7 @@ hold off
 
 %%
 subaxis(2,2,3)
-vorticity=(u(ipx,:,2)-u(imx,:,2))/dx  -(u(:,ipz,1)+u(:,imz,1))/dz;
+vorticity=(u(ipx,:,2)-u(imx,:,2))/dx  -(u(:,ipz,1)-u(:,imz,1))/dz;
 
 heatmap2d(vorticity,xgrid,zgrid); hold on
 plot(X(1:Nb*2,1),X(1:Nb*2,2),'k.')
