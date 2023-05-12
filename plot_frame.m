@@ -29,7 +29,7 @@ valmax = max(abs(u(:,:,2)),[],'all')+0.01;
 cmocean('balanced')
 clim([-valmax valmax]); colorbar
 
-title("$v$")
+title("$w$")
 
 hold off
 

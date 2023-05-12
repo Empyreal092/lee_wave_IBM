@@ -14,7 +14,7 @@ if ~exist('t','var')
     init_a
     t = 0;
 
-    bouN = 0.12*1.5;
+    bouN = 0.12*0.9;
     Point_rho = -(H-Xgg(:,2))*bouN^2;
 
     %%

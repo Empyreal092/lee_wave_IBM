@@ -8,7 +8,7 @@
 #SBATCH --mail-type=END
 #SBATCH --mail-user=sd3201@nyu.edu
 #SBATCH --output=slurm_%j.out
-#SBATCH --array=0,1,2,3,10,11,12,13
+#SBATCH --array=10,11,12,13
 
 module purge
 module load matlab/2021a

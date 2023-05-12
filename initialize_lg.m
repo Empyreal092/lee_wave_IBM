@@ -45,7 +45,7 @@ bump_h = 0.57*bump_wid;
 for k=0:Nb-1
     dxb = L/Nb;
     X(k+1,1)=k*dxb;
-    X(k+1,2)=bump_h*exp(-(X(k+1,1)-bump_wid*3)^2/(2*bump_wid^2));
+    X(k+1,2)=bump_h*exp(-(X(k+1,1)-bump_wid*4)^2/(2*bump_wid^2));
 
     X(k+Nb+1,1)=k*dxb;
     X(k+Nb+1,2)=0;
