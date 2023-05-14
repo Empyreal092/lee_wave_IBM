@@ -73,7 +73,7 @@ Thumbs.db
 ###### Vids and pics ######
 #*.png
 *.avi
-*.jpg
+#*.jpg
 *.fig
 *.gif
 
