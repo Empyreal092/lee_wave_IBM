@@ -1,10 +1,14 @@
 if ~exist('fg99')
     fg99 = figure(99);
-    fg99.WindowState = 'maximized';
+    pplot(27,0.65)
+%     fg99.WindowState = 'maximized';
 end
 
-sgtitle("$\mbox{Re}="+max(abs(u(:,:,2)),[],'all')*bump_h/mu+...
-    "; \mbox{Fr}="+max(abs(u(:,:,2)),[],'all')/(bouN*bump_h)+"; t="+t+"$")
+% bump_h = bump_h*2;
+% sgtitle("$\mbox{Re}="+max(abs(u(:,20:end,2)),[],'all')*bump_h/mu+...
+%     "; \mbox{Fr}="+mean(abs(u(:,20:end,2)),'all')/(bouN*bump_h)+"; t="+t+"$")
+sgtitle("$\mbox{Re}="+max(abs(u(:,20:end,2)),[],'all')*bump_h/mu+...
+    "; \mbox{Fr}="+mean(abs(u(:,20:end,2)),'all')/(bouN*bump_h)+"; t="+t+"$")
 
 %%
 subaxis(2,2,1,'ML',0.05,'MR',0.05,'MT',0.12,'MB',0.1,'SV',0.15,'SH',0.06);
@@ -16,6 +20,7 @@ cmocean('speed')
 clim([0 valmax]); colorbar
 
 title("$u$")
+axis equal
 
 hold off
 
@@ -30,6 +35,7 @@ cmocean('balanced')
 clim([-valmax valmax]); colorbar
 
 title("$w$")
+axis equal
 
 hold off
 
@@ -46,6 +52,7 @@ cmocean('curl')
 clim([-valmax valmax]); colorbar
 
 title("$\omega$")
+axis equal
 
 hold off
 
@@ -60,7 +67,12 @@ plot(X(1:Nb*2,1),X(1:Nb*2,2),'k.');
 
 cmocean('-dense'); colorbar
 title("$b$")
+axis equal
 
 hold off
 
 drawnow
+
+%%
+pplot(27,0.65)
+savefig("../figs/ib2D_10_t"+clock)
