@@ -71,10 +71,11 @@ Thumbs.db
 
 
 ###### Vids and pics ######
-*.png
+#*.png
 *.avi
 *.jpg
 *.fig
 *.gif
 
 code_archive/*
+Data/figs/*
